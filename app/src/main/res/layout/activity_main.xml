@@ -1,18 +1,136 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="15dp"
     tools:context=".MainActivity">
 
-    <TextView
-        android:layout_width="wrap_content"
+    <LinearLayout
+        android:id="@+id/rotorWindow"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:baselineAligned="false"
+        android:gravity="top|center"
+        android:orientation="horizontal">
 
-</android.support.constraint.ConstraintLayout>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="33"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <Button
+                android:id="@+id/upBtn1"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:text="@string/upChar"
+                android:textSize="24sp" />
+
+            <TextView
+                android:id="@+id/rotorWindow1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingBottom="5dp"
+                android:paddingTop="5dp"
+                android:textAlignment="center"
+                android:textSize="18sp" />
+
+            <Button
+                android:id="@+id/dnBtn1"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:text="@string/downChar"
+                android:textSize="24sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="33"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <Button
+                android:id="@+id/upBtn2"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:text="@string/upChar"
+                android:textSize="24sp" />
+
+            <TextView
+                android:id="@+id/rotorWindow2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingBottom="5dp"
+                android:paddingTop="5dp"
+                android:textAlignment="center"
+                android:textSize="18sp" />
+
+            <Button
+                android:id="@+id/dnBtn2"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:text="@string/downChar"
+                android:textSize="24sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="33"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <Button
+                android:id="@+id/upBtn3"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:text="@string/upChar"
+                android:textSize="24sp" />
+
+            <TextView
+                android:id="@+id/rotorWindow3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingBottom="5dp"
+                android:paddingTop="5dp"
+                android:textAlignment="center"
+                android:textSize="18sp" />
+
+            <Button
+                android:id="@+id/dnBtn3"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:text="@string/downChar"
+                android:textSize="24sp" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:paddingTop="10dp">
+
+        <GridLayout
+            android:id="@+id/inputButtons"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:layout_weight="50">
+
+        </GridLayout>
+
+        <GridLayout
+            android:id="@+id/outputButtons"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:layout_weight="50">
+
+        </GridLayout>
+    </LinearLayout>
+</LinearLayout>
