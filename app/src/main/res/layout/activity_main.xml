@@ -109,28 +109,62 @@
         </LinearLayout>
     </LinearLayout>
 
-    <LinearLayout
+    <TableLayout
+        android:id="@+id/input"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical"
+        android:layout_height="wrap_content"
         android:paddingTop="10dp">
 
-        <GridLayout
+        <TableRow
             android:id="@+id/inputButtons"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:layout_weight="50">
+            android:layout_weight="33"
+            android:gravity="center">
 
-        </GridLayout>
+        </TableRow>
 
-        <GridLayout
+        <TableRow
+            android:id="@+id/inputButtons1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="33"
+            android:gravity="center">
+
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/inputButtons2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="33"
+            android:gravity="center" />
+
+    </TableLayout>
+
+    <TableLayout
+        android:id="@+id/output"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TableRow
             android:id="@+id/outputButtons"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_gravity="center"
-            android:layout_weight="50">
+            android:layout_height="match_parent" />
 
-        </GridLayout>
-    </LinearLayout>
+        <TableRow
+            android:id="@+id/outputButtons1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+        <TableRow
+            android:id="@+id/outputButtons2"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+    </TableLayout>
+
 </LinearLayout>
