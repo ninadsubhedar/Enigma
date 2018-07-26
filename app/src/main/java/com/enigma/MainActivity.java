@@ -52,8 +52,9 @@ public class MainActivity extends AppCompatActivity {
         for(int i=0;i<10;i++) {
             Button button = new Button(this);
             button.setText(list.get(i));
-            button.setLayoutParams(new TableRow.LayoutParams(130, ViewGroup.LayoutParams.WRAP_CONTENT));
+            button.setLayoutParams(new TableRow.LayoutParams(130, ViewGroup.LayoutParams.WRAP_CONTENT,1));
             button.setGravity(Gravity.CENTER);
+            button.setTextSize(14);
             inputConnector = new InputConnector(rotor1);
             button.setOnClickListener(inputConnector);
             row.addView(button);
@@ -63,8 +64,9 @@ public class MainActivity extends AppCompatActivity {
         for(int i=10;i<19;i++) {
             Button button = new Button(this);
             button.setText(list.get(i));
-            button.setLayoutParams(new TableRow.LayoutParams(130,ViewGroup.LayoutParams.WRAP_CONTENT));
+            button.setLayoutParams(new TableRow.LayoutParams(130,ViewGroup.LayoutParams.WRAP_CONTENT,1));
             button.setGravity(Gravity.CENTER);
+            button.setTextSize(14);
             inputConnector = new InputConnector(rotor1);
             button.setOnClickListener(inputConnector);
             row.addView(button);
@@ -74,8 +76,9 @@ public class MainActivity extends AppCompatActivity {
         for(int i=19;i<26;i++) {
             Button button = new Button(this);
             button.setText(list.get(i));
-            button.setLayoutParams(new TableRow.LayoutParams(130,ViewGroup.LayoutParams.WRAP_CONTENT));
+            button.setLayoutParams(new TableRow.LayoutParams(130,ViewGroup.LayoutParams.WRAP_CONTENT,2));
             button.setGravity(Gravity.CENTER);
+            button.setTextSize(14);
             inputConnector = new InputConnector(rotor1);
             button.setOnClickListener(inputConnector);
             row.addView(button);
@@ -96,7 +99,7 @@ public class MainActivity extends AppCompatActivity {
         for(int i=0;i<10;i++) {
             Button button = new Button(this);
             button.setText(list.get(i));
-            button.setLayoutParams(new TableRow.LayoutParams(130, ViewGroup.LayoutParams.WRAP_CONTENT));
+            button.setLayoutParams(new TableRow.LayoutParams(130, ViewGroup.LayoutParams.WRAP_CONTENT,1));
             button.setGravity(Gravity.CENTER);
             button.setBackgroundColor(Color.rgb(200,200 ,200));
             row.addView(button);
@@ -107,7 +110,7 @@ public class MainActivity extends AppCompatActivity {
         for(int i=10;i<19;i++) {
             Button button = new Button(this);
             button.setText(list.get(i));
-            button.setLayoutParams(new TableRow.LayoutParams(130,ViewGroup.LayoutParams.WRAP_CONTENT));
+            button.setLayoutParams(new TableRow.LayoutParams(130,ViewGroup.LayoutParams.WRAP_CONTENT,1));
             button.setGravity(Gravity.CENTER);
             button.setBackgroundColor(Color.rgb(200,200 ,200));
             row.addView(button);
@@ -118,7 +121,7 @@ public class MainActivity extends AppCompatActivity {
         for(int i=19;i<26;i++) {
             Button button = new Button(this);
             button.setText(list.get(i));
-            button.setLayoutParams(new TableRow.LayoutParams(130,ViewGroup.LayoutParams.WRAP_CONTENT));
+            button.setLayoutParams(new TableRow.LayoutParams(130,ViewGroup.LayoutParams.WRAP_CONTENT,1));
             button.setGravity(Gravity.CENTER);
             button.setBackgroundColor(Color.rgb(200,200 ,200));
             row.addView(button);

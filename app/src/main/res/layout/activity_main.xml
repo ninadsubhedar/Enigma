@@ -122,6 +122,7 @@
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:layout_gravity="center"
+            android:layout_weight="1"
             android:gravity="center" />
 
         <TableRow
@@ -129,14 +130,20 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:gravity="center" />
+            android:layout_weight="1"
+            android:gravity="center"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp" />
 
         <TableRow
             android:id="@+id/outputButtons2"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:gravity="center" />
+            android:layout_weight="1"
+            android:gravity="center"
+            android:paddingLeft="50dp"
+            android:paddingRight="50dp" />
 
     </TableLayout>
 
@@ -162,7 +169,9 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:layout_weight="33"
-            android:gravity="center">
+            android:gravity="center"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp">
 
         </TableRow>
 
@@ -172,7 +181,9 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:layout_weight="33"
-            android:gravity="center" />
+            android:gravity="center"
+            android:paddingLeft="50dp"
+            android:paddingRight="50dp" />
 
     </TableLayout>
 
