@@ -110,6 +110,37 @@
     </LinearLayout>
 
     <TableLayout
+        android:id="@+id/output"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:paddingTop="10dp">
+
+        <TableRow
+            android:id="@+id/outputButtons"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:gravity="center" />
+
+        <TableRow
+            android:id="@+id/outputButtons1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center" />
+
+        <TableRow
+            android:id="@+id/outputButtons2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center" />
+
+    </TableLayout>
+
+    <TableLayout
         android:id="@+id/input"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -142,28 +173,6 @@
             android:layout_gravity="center"
             android:layout_weight="33"
             android:gravity="center" />
-
-    </TableLayout>
-
-    <TableLayout
-        android:id="@+id/output"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
-
-        <TableRow
-            android:id="@+id/outputButtons"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent" />
-
-        <TableRow
-            android:id="@+id/outputButtons1"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent" />
-
-        <TableRow
-            android:id="@+id/outputButtons2"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent" />
 
     </TableLayout>
 

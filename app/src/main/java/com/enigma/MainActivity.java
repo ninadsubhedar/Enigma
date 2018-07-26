@@ -1,5 +1,6 @@
 package com.enigma;
 
+import android.graphics.Color;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.Gravity;
@@ -13,11 +14,26 @@ import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
 
+    OutputConnector outputConnector;
+    ReflectorConnector reflector;
+    RotorConnector rotor1, rotor2,rotor3;
+    InputConnector inputConnector;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        outputConnector = new OutputConnector();
+        reflector = new ReflectorConnector(null,"YRUHQSLDPXNGOKMIEBFZCWVJAT");
+        rotor1 = new RotorConnector(null,outputConnector,"BDFHJLCPRTXVZNYEIWGAKMUSQO",'V');
+        rotor2 = new RotorConnector(null,rotor1,"AJDKSIRUXBLHWTMCQGZNPYFVOE",'E');
+        rotor3 = new RotorConnector(reflector,rotor2,"EKMFLGDQVZNTOWYHXUSPAIBRCJ",'Q');
+        reflector.setNext(rotor3);
+        rotor2.setNext(rotor3);
+        rotor1.setNext(rotor2);
+
+        initOutputPad();
         initInputPad();
     }
 
@@ -38,7 +54,8 @@ public class MainActivity extends AppCompatActivity {
             button.setText(list.get(i));
             button.setLayoutParams(new TableRow.LayoutParams(130, ViewGroup.LayoutParams.WRAP_CONTENT));
             button.setGravity(Gravity.CENTER);
-
+            inputConnector = new InputConnector(rotor1);
+            button.setOnClickListener(inputConnector);
             row.addView(button);
         }
 
@@ -48,7 +65,8 @@ public class MainActivity extends AppCompatActivity {
             button.setText(list.get(i));
             button.setLayoutParams(new TableRow.LayoutParams(130,ViewGroup.LayoutParams.WRAP_CONTENT));
             button.setGravity(Gravity.CENTER);
-
+            inputConnector = new InputConnector(rotor1);
+            button.setOnClickListener(inputConnector);
             row.addView(button);
         }
 
@@ -58,13 +76,13 @@ public class MainActivity extends AppCompatActivity {
             button.setText(list.get(i));
             button.setLayoutParams(new TableRow.LayoutParams(130,ViewGroup.LayoutParams.WRAP_CONTENT));
             button.setGravity(Gravity.CENTER);
-
+            inputConnector = new InputConnector(rotor1);
+            button.setOnClickListener(inputConnector);
             row.addView(button);
         }
     }
 
-    private void initOutPad() {
-
+    private void initOutputPad() {
 
         List<String> list = new ArrayList<>();
 
@@ -80,8 +98,9 @@ public class MainActivity extends AppCompatActivity {
             button.setText(list.get(i));
             button.setLayoutParams(new TableRow.LayoutParams(130, ViewGroup.LayoutParams.WRAP_CONTENT));
             button.setGravity(Gravity.CENTER);
-
+            button.setBackgroundColor(Color.rgb(200,200 ,200));
             row.addView(button);
+            outputConnector.setView(button);
         }
 
         row = findViewById(R.id.outputButtons1);
@@ -90,8 +109,9 @@ public class MainActivity extends AppCompatActivity {
             button.setText(list.get(i));
             button.setLayoutParams(new TableRow.LayoutParams(130,ViewGroup.LayoutParams.WRAP_CONTENT));
             button.setGravity(Gravity.CENTER);
-
+            button.setBackgroundColor(Color.rgb(200,200 ,200));
             row.addView(button);
+            outputConnector.setView(button);
         }
 
         row = findViewById(R.id.outputButtons2);
@@ -100,8 +120,9 @@ public class MainActivity extends AppCompatActivity {
             button.setText(list.get(i));
             button.setLayoutParams(new TableRow.LayoutParams(130,ViewGroup.LayoutParams.WRAP_CONTENT));
             button.setGravity(Gravity.CENTER);
-
+            button.setBackgroundColor(Color.rgb(200,200 ,200));
             row.addView(button);
+            outputConnector.setView(button);
         }
     }
 }
