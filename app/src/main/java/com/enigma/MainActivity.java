@@ -4,6 +4,7 @@ import android.graphics.Color;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.Gravity;
+import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.TableRow;
@@ -26,15 +27,37 @@ public class MainActivity extends AppCompatActivity {
 
         outputConnector = new OutputConnector();
         reflector = new ReflectorConnector(null,"YRUHQSLDPXNGOKMIEBFZCWVJAT");
-        rotor1 = new RotorConnector(null,outputConnector,"BDFHJLCPRTXVZNYEIWGAKMUSQO",'V');
-        rotor2 = new RotorConnector(null,rotor1,"AJDKSIRUXBLHWTMCQGZNPYFVOE",'E');
-        rotor3 = new RotorConnector(reflector,rotor2,"EKMFLGDQVZNTOWYHXUSPAIBRCJ",'Q');
+        rotor1 = new RotorConnector(null,outputConnector,"BDFHJLCPRTXVZNYEIWGAKMUSQO",'V',findViewById(R.id.rotorWindow1));
+        rotor2 = new RotorConnector(null,rotor1,"AJDKSIRUXBLHWTMCQGZNPYFVOE",'E',findViewById(R.id.rotorWindow2));
+        rotor3 = new RotorConnector(reflector,rotor2,"EKMFLGDQVZNTOWYHXUSPAIBRCJ",'Q',findViewById(R.id.rotorWindow3));
         reflector.setNext(rotor3);
         rotor2.setNext(rotor3);
         rotor1.setNext(rotor2);
 
+        initRotorPads();
         initOutputPad();
         initInputPad();
+
+        findViewById(R.id.resetBtn).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                rotor1.reset();
+                rotor2.reset();
+                rotor3.reset();
+                outputConnector.reset();
+            }
+        });
+    }
+
+    private void initRotorPads(){
+
+        findViewById(R.id.upBtn1).setOnClickListener(new ManualRotate(false,rotor1));
+        findViewById(R.id.upBtn2).setOnClickListener(new ManualRotate(false,rotor2));
+        findViewById(R.id.upBtn3).setOnClickListener(new ManualRotate(false,rotor3));
+
+        findViewById(R.id.dnBtn1).setOnClickListener(new ManualRotate(true,rotor1));
+        findViewById(R.id.dnBtn2).setOnClickListener(new ManualRotate(true,rotor2));
+        findViewById(R.id.dnBtn3).setOnClickListener(new ManualRotate(true,rotor3));
     }
 
     private void initInputPad() {

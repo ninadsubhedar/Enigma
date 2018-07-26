@@ -31,4 +31,8 @@ public class OutputConnector extends Connector {
 
 
     }
+
+    public void reset(){
+        view[prevI].setBackgroundColor(Color.rgb(200,200 ,200));
+    }
 }
