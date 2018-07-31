@@ -9,7 +9,7 @@ public class OutputConnector extends Connector {
     private View[] view;
     private static int prevI;
 
-    public OutputConnector() {
+    OutputConnector() {
         super(null, null);
         view = new View[26];
     }

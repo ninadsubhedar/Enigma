@@ -2,7 +2,7 @@ package com.enigma;
 
 public class ReflectorConnector extends RotorConnector {
 
-    public ReflectorConnector(Connector next, String rotorValues) {
+    ReflectorConnector(Connector next, String rotorValues) {
         super(next, next, rotorValues, 'A',null);
     }
 

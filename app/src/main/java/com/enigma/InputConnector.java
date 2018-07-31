@@ -5,7 +5,7 @@ import android.widget.Button;
 
 public class InputConnector extends Connector implements View.OnClickListener {
 
-    public InputConnector(Connector next) {
+    InputConnector(Connector next) {
         super(next, null);
     }
 
