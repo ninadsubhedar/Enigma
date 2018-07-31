@@ -9,14 +9,13 @@ public class OutputConnector extends Connector {
     private View[] view;
     private static int prevI;
 
-    public OutputConnector() {
+    OutputConnector() {
         super(null, null);
         view = new View[26];
     }
 
     @Override
     public void connect(Boolean direction, Object obj) {
-        //super.connect(direction, obj);
         int charVal = ((String) obj).charAt(0);
         int i = charVal - 65;
         view[prevI].setBackgroundColor(Color.rgb(200,200 ,200));
