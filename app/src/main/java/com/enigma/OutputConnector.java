@@ -18,6 +18,7 @@ public class OutputConnector extends Connector {
     public void connect(Boolean direction, Object obj) {
         //super.connect(direction, obj);
         int charVal = ((String) obj).charAt(0);
+
         int i = charVal - 65;
         view[prevI].setBackgroundColor(Color.rgb(200,200 ,200));
         view[i].setBackgroundColor(Color.rgb(0,100,0));
