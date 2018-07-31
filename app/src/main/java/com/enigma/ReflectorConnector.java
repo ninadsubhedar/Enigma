@@ -13,10 +13,6 @@ public class ReflectorConnector extends RotorConnector {
         String c = this.baseRotor.charAt(index)+"";
         int index1 = rotorValues.indexOf(c);
         obj = next.baseRotor.charAt(index1)+"";
-
-        /*int charVal = ((String) obj).charAt(0);
-        int i = charVal - 65;
-        obj = rotorValues.charAt(i);*/
         next.connect(!direction,obj);
     }
 

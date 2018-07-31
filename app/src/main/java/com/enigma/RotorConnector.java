@@ -5,7 +5,7 @@ import android.widget.TextView;
 
 public class RotorConnector extends Connector {
 
-    String rotorValues;// = "OUSQOBDFHJLPRTXVZNYEIWGAK";
+    String rotorValues;
     String rotorCopy,baseRotorCopy;
     char mark;
     View view;
